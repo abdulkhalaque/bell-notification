@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fa-bell {
+    font-size: 15vw;
+}
+
+.bell-notification{
+    color: rgb(37, 5, 66);
+    position: relative;
+    animation: belli 3s linear infinite alternate-reverse;
+    transform-origin: top;
+}
+.bell-notification::after{
+    content: attr(current-value);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(180, 17, 17);
+    border-radius: 50%;
+    top: 0;
+    right: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    border: 10px solid #fff;
+    
+}
+@keyframes belli{
+    0%{
+        transform: rotate(-20deg);
+        
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
